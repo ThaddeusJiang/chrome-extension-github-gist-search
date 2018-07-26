@@ -10,6 +10,20 @@ function loadCSS() {
   document.head.appendChild(ele)
 }
 
+function showNewGistPage() {
+  const width =
+    window.screen.availWidth > 1100 ? 1100 : window.screen.availWidth / 2
+  const height = window.screen.availHeight - 200
+
+  const left = width - 100
+  const top = 100
+  window.open(
+    'https://gist.github.com',
+    'gist',
+    `width=${width}, height=${height}, left=${left}, top=${top}`,
+  )
+}
+
 function isSearchPage(id = 'lst-ib') {
   return document.getElementById(id) != null
 }
@@ -23,13 +37,21 @@ function prefixHref(data) {
 }
 
 function createHeader() {
-  const header = document.createElement('header')
+  const header = document.createElement('div')
+  header.className = 'header'
 
-  const logo = document.createElement('div')
+  const logo = document.createElement('span')
   logo.innerText = 'GitHub Gist Search'
-  logo.className = 'branding'
-  header.appendChild(logo)
+  logo.className = 'logo'
 
+  const newBtn = document.createElement('a')
+  newBtn.text = 'New gist'
+  newBtn.href = '#'
+  newBtn.onclick = showNewGistPage
+  newBtn.className = 'btn_new'
+
+  header.appendChild(logo)
+  header.appendChild(newBtn)
   return header
 }
 
