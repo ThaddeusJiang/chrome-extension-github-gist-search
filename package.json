@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^23.4.1"
+  },
+  "jest": {
+    "globals": {
+      "chrome": {
+        "extension": {}
+      }
+    }
+  }
+}

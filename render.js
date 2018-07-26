@@ -17,7 +17,8 @@ function showNewGistPage() {
 
   const left = width - 100
   const top = 100
-  window.open(
+
+  return window.open(
     'https://gist.github.com',
     'gist',
     `width=${width}, height=${height}, left=${left}, top=${top}`,
@@ -111,3 +112,16 @@ function main() {
 }
 
 main()
+
+/**
+ * FIXME: 只是用 Chrome 支持的语法，不使用 babel。
+ * 也没有计划使用 webpack。
+ * 因为如此简单的功能，使用 webpack 打包，js 不但没有被压缩，反而增加了很多无用的代码。
+ */
+module.exports = {
+  main: main,
+  isSearchPage: isSearchPage,
+  prefixHref: prefixHref,
+  loadCSS: loadCSS,
+  showNewGistPage: showNewGistPage,
+}

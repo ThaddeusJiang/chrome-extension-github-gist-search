@@ -1,7 +1,7 @@
 {
   "name": "github-gist-search",
   "description": "Chrome Extension GitHub Gist Search",
-  "version": "0.1",
+  "version": "0.2",
   "browser_action": {
     "default_popup": "hello.html",
     "default_icon": "images/icon128.png"
