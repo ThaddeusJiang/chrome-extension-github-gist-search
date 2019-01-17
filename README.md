@@ -13,3 +13,14 @@ This is a chrome extension, search for your GitHub Gist by Chrome search box.
 
 - New gist
 ![New gist](./New-gist.png)
+
+## Dev
+- clone
+```
+$ git clone https://github.com/ThaddeusJiang/chrome-extension-github-gist-search.git
+```
+
+- debug
+open `chrome://extensions/` in chrome.
+
+click `Load unpacked`.
